@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- !!!! Driver Class Path !!!! -->
+    <classPathEntry location="D:\runtime\mvnRepo\mysql\mysql-connector-java\5.1.32\mysql-connector-java-5.1.32.jar"/>
+    <context id="context" targetRuntime="MyBatis3">
+        <!-- 是否去除注释-->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <!-- !!!! Database Configurations !!!! -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/e3malldb?characterEncoding=UTF8&amp;useSSL=false"
+                        userId="root" password=""/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- !!!! Model Configurations !!!! -->
+        <javaModelGenerator targetPackage="cn.e3mall.pojo" targetProject="src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- !!!! Mapper XML Configurations !!!! -->
+        <sqlMapGenerator targetPackage="cn/e3mall/mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+        <!-- !!!! 【上下都应该放在同一个目录下】 !!!! -->
+        <!-- !!!! Mapper Interface Configurations !!!! -->
+        <javaClientGenerator targetPackage="cn.e3mall.mapper" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!-- !!!! Table Configurations !!!! -->
+        <!-- 指定数据库表 -->
+        <table schema="" tableName="tb_content"></table>
+        <table schema="" tableName="tb_content_category"></table>
+        <table schema="" tableName="tb_item"></table>
+        <table schema="" tableName="tb_item_cat"></table>
+        <table schema="" tableName="tb_item_desc"></table>
+        <table schema="" tableName="tb_item_param"></table>
+        <table schema="" tableName="tb_item_param_item"></table>
+        <table schema="" tableName="tb_order"></table>
+        <table schema="" tableName="tb_order_item"></table>
+        <table schema="" tableName="tb_order_shipping"></table>
+        <table schema="" tableName="tb_user"></table>
+
+    </context>
+</generatorConfiguration>
