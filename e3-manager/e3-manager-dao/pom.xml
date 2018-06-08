@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>e3-manager-dao</artifactId>
+    <packaging>jar</packaging><!--打包形式改成jar-->
     <dependencies>
         <dependency>
             <groupId>cn.e3mall</groupId>
@@ -44,5 +45,17 @@
             <artifactId>druid</artifactId>
         </dependency>
     </dependencies>
-
+    <!--加了这个的意思是指定资源目录！有了这个就会去资源目录下去寻找xml文件，否则xml文件会被漏掉！-->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>

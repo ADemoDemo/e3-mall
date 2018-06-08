@@ -5,7 +5,7 @@
       <configuration />
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -16,6 +16,8 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8.0_91" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="e3-manager-interface" level="project" />
+    <orderEntry type="library" name="e3-manager-interface1" level="project" />
     <orderEntry type="module" module-name="e3-manager-dao" />
     <orderEntry type="module" module-name="e3-manager-pojo" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />

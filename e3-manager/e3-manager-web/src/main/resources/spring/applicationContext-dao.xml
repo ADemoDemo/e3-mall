@@ -27,6 +27,9 @@
         <property name="dataSource" ref="dataSource" />
         <!-- 加载mybatis的全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
+        <!-- 为了解决 Request processing failed; nested exception is org.apache.ibatis.binding.BindingException错误 -->
+
+
     </bean>
     <!-- 配置包扫描器[之后dao的工程会打包成一个jar包，放在web工程的lib下。即在classpath之下] -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
